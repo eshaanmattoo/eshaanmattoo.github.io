@@ -1,0 +1,36 @@
+body {
+  background-color: lightblue;
+  background-image: url("../about/leaf.png");
+  background-position: center;
+  height: 20em;
+  background-repeat: no-repeat;
+}
+p {
+  font-family: sans-serif;
+}
+.logo {
+  text-align: center;
+  padding: 60px;
+  text-align: center;
+  background: #1abc9c;
+  color: white;
+  font-size: 2em;
+}
+nav {
+  text-align: center;
+  font-size: 1.5em;
+}
+.dothr {
+  border-top: 3px dashed#bbb;
+}
+
+.main {
+  text-align: left;
+}
+.dashedhr {
+  border-top: 8px solid #bbb;
+  border-radius: 5px;
+}
+.foot {
+  text-align: center;
+}
