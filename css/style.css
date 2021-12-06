@@ -34,4 +34,16 @@ nav {
 }
 .foot {
   text-align: center;
+  padding-bottom: 0px;
+  padding-top: 10px;
+}
+.foot a {
+  padding: 12px 16px;
+  color: #fff;
+  margin: 0 5px;
+  transition: all 0.7s ease;
+  font-size: 20px;
+}
+.foot a:hover {
+  background-color: cadetblue;
 }
