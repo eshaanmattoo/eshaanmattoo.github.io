@@ -2,19 +2,21 @@ body {
   background-color: lightblue;
   background-image: url("../about/leaf.png");
   background-position: center;
-  height: 20em;
+  margin: 0;
   background-repeat: no-repeat;
 }
 p {
   font-family: sans-serif;
 }
 .logo {
+  width: 100%;
   text-align: center;
-  padding: 60px;
+  padding: 10px 10px 10px 10px;
+  margin: 0%;
   text-align: center;
   background: #1abc9c;
   color: white;
-  font-size: 2em;
+  font-size: 28px;
 }
 nav {
   text-align: center;
@@ -49,8 +51,7 @@ nav {
   background-color: cadetblue;
 }
 .foot footer {
-  position: absolute;
+  position: relative;
 
-  top: 100px;
   width: 100%;
 }
