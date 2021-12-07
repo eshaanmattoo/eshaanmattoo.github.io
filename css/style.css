@@ -47,3 +47,9 @@ nav {
 .foot a:hover {
   background-color: cadetblue;
 }
+.foot footer {
+  position: fixed;
+  left: 0;
+  bottom: 1em;
+  width: 100%;
+}
