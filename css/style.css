@@ -23,12 +23,16 @@ nav {
   font-size: 1.5em;
   background-color: tan;
 }
+
 .dothr {
   border-top: 3px dashed#bbb;
 }
 
 .main {
   text-align: left;
+}
+.main a:link {
+  color: red;
 }
 .dashedhr {
   border-top: 8px solid #bbb;
