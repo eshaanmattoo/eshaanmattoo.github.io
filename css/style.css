@@ -2,7 +2,7 @@ body {
   background-color: lightblue;
   background-image: url("../about/leaf.png");
   background-position: center;
-  margin: 0;
+  margin: 10px 10px;
   background-repeat: no-repeat;
 }
 p {
