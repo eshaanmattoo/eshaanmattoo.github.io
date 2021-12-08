@@ -1,7 +1,7 @@
 html,
 body {
   height: 100%;
-  width: 100%;
+  /* width: 100%; */
 }
 body {
   /* background-color: lightblue;
@@ -19,11 +19,10 @@ p {
   font-size: 20px;
 }
 .logo {
-  width: 100%;
   text-align: center;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 0px 0px 10px;
   margin: 0%;
-  text-align: center;
+
   background: #1abc9c;
   color: white;
   font-size: 30px;
