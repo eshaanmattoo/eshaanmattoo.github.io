@@ -45,12 +45,14 @@ nav {
   color: red;
 }
 .list {
+  padding-left: 20px;
+  padding-right: 10px;
   border-top: 5px;
   border-bottom: 5px;
   border-left: 5px;
   border-right: 5px;
   border-style: solid;
-  width: 50%;
+  width: 70%;
   border-radius: 20px;
 }
 .dashedhr {
