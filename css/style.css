@@ -21,6 +21,7 @@ p {
 .logo {
   text-align: center;
   padding: 10px 0px 0px 10px;
+  padding-bottom: 10px;
   margin: 0%;
 
   background: #1abc9c;
@@ -42,6 +43,15 @@ nav {
 }
 .main a:link {
   color: red;
+}
+.list {
+  border-top: 5px;
+  border-bottom: 5px;
+  border-left: 5px;
+  border-right: 5px;
+  border-style: solid;
+  width: 50%;
+  border-radius: 20px;
 }
 .dashedhr {
   border-top: 8px solid #bbb;
