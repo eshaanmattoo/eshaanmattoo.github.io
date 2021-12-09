@@ -32,8 +32,18 @@ nav {
   text-align: center;
   font-size: 20px;
   background-color: tan;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
-
+nav a:hover {
+  font-size: 22px;
+  padding: 12px 16px;
+  transition: all 0.2s ease;
+  background-color: rgb(212, 167, 112);
+  border-radius: 10px;
+  border-color: cadetblue;
+  border-style: solid;
+}
 .dothr {
   border-top: 3px dashed#bbb;
 }
@@ -49,6 +59,14 @@ nav {
   border-bottom: 10px solid gray;
   background-color: rgb(110, 168, 187);
   width: 70%;
+  padding-right: 10px;
+  margin: 10px;
+}
+.list li:hover {
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  background-color: cadetblue;
+  border-radius: 10px;
 }
 .dashedhr {
   border-top: 8px solid #bbb;
