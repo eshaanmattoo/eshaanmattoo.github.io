@@ -47,7 +47,7 @@ nav {
 .list {
   border-top: 10px solid gray;
   border-bottom: 10px solid gray;
-
+  background-color: rgb(110, 168, 187);
   width: 70%;
 }
 .dashedhr {
