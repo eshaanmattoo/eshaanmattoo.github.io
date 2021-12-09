@@ -36,12 +36,11 @@ nav {
   padding-bottom: 10px;
 }
 nav a:hover {
-  font-size: 22px;
   padding: 12px 16px;
   transition: all 0.2s ease;
   background-color: rgb(212, 167, 112);
   border-radius: 10px;
-  border-color: cadetblue;
+  border-color: rgb(209, 161, 102);
   border-style: solid;
 }
 .dothr {
@@ -67,6 +66,7 @@ nav a:hover {
   transition: all 0.3s ease;
   background-color: cadetblue;
   border-radius: 10px;
+  transition-timing-function: linear;
 }
 .dashedhr {
   border-top: 8px solid #bbb;
@@ -93,3 +93,11 @@ nav a:hover {
 
   width: 100%;
 }
+/* li h3:hover {
+  padding: 12px 16px;
+  border-radius: 20px;
+  background-color: cadetblue;
+  transition-duration: 0.3s;
+
+  transition-timing-function: linear;
+} */
