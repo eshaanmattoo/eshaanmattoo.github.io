@@ -65,6 +65,16 @@ nav a:hover {
   margin: 10px;
   /* cursor: pointer; */
 }
+.animates {
+  display: flex;
+  justify-content: center;
+}
+.animates div {
+  font-size: 125px;
+
+  padding: 0px 10px;
+  display: inline-block;
+}
 .list li:hover {
   padding: 12px 16px;
   transition: all 0.3s ease;
