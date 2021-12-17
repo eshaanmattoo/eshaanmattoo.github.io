@@ -65,6 +65,14 @@ nav a:hover {
   margin: 10px;
   /* cursor: pointer; */
 }
+.list li:hover {
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  background-color: cadetblue;
+  border-radius: 10px;
+  transition-timing-function: linear;
+}
+
 .animates {
   display: flex;
   justify-content: center;
@@ -75,13 +83,7 @@ nav a:hover {
   padding: 0px 10px;
   display: inline-block;
 }
-.list li:hover {
-  padding: 12px 16px;
-  transition: all 0.3s ease;
-  background-color: cadetblue;
-  border-radius: 10px;
-  transition-timing-function: linear;
-}
+
 .dashedhr {
   border-top: 8px solid #bbb;
   border-radius: 5px;
