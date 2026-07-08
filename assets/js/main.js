@@ -227,7 +227,7 @@
       return;
     }
 
-    const markdown = await getText(`content/posts/${post.slug}.md`);
+    const markdown = await getPostText(post);
     document.title = `${post.title} | Professional Journey`;
     container.innerHTML = `
       <header>
@@ -238,6 +238,25 @@
       </header>
       <div class="post-content">${markdownToHTML(markdown)}</div>
     `;
+  }
+
+  async function getPostText(post) {
+    const candidates = [
+      post.source,
+      `content/posts/${post.slug}.txt`,
+      `content/posts/${post.slug}.md`
+    ].filter(Boolean);
+    let lastError;
+
+    for (const path of candidates) {
+      try {
+        return await getText(path);
+      } catch (error) {
+        lastError = error;
+      }
+    }
+
+    throw lastError || new Error(`Could not load post ${post.slug}`);
   }
 
   function renderContact(site) {

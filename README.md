@@ -22,13 +22,14 @@ Start with these files:
 - `content/experience.json`: experience entries.
 - `content/projects.json`: project cards and links.
 - `content/posts/index.json`: blog post metadata.
-- `content/posts/*.md`: blog post content.
+- `content/posts/*.txt`: blog post content served by GitHub Pages.
+- `content/posts/*.md`: editable Markdown copies kept for local authoring/reference.
 
 ## Add A New Blog Post
 
-1. Create a Markdown file in `content/posts/`, for example `content/posts/my-new-post.md`.
+1. Create a post body file in `content/posts/`, for example `content/posts/my-new-post.txt`.
 2. Add the post metadata to `content/posts/index.json`.
-3. Use the slug without `.md` in the metadata:
+3. Use the slug without `.txt` in the metadata and add a `source` path:
 
 ```json
 {
@@ -37,6 +38,7 @@ Start with these files:
   "date": "2026-07-08",
   "readingTime": "3 min read",
   "category": "Engineering Notes",
+  "source": "content/posts/my-new-post.txt",
   "excerpt": "A short summary for the blog page.",
   "tags": ["Robotics", "Learning"],
   "image": "assets/images/post-growth-roadmap.png",
