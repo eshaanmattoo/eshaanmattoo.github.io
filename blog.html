@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Technical blog posts and personal engineering insights.">
+    <title>Blog | Professional Journey</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="assets/js/main.js" defer></script>
+  </head>
+  <body data-page="blog">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-site-header>
+      <div class="header-inner">
+        <a class="brand" href="index.html" aria-label="Go to home">
+          <span class="brand-mark" data-brand-initials>EM</span>
+          <span class="brand-copy">
+            <strong data-brand-name>Professional Journey</strong>
+            <small data-brand-role>Technical Blog</small>
+          </span>
+        </a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <nav class="site-nav" id="site-nav" data-site-nav aria-label="Primary navigation"></nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="page-hero">
+        <div class="section-shell">
+          <p class="kicker">Technical Blog</p>
+          <h1>Engineering notes, build logs, and the thinking behind the work.</h1>
+          <p>Add new posts as Markdown files in <code>content/posts/</code>, then register them in <code>content/posts/index.json</code>.</p>
+        </div>
+      </section>
+      <section class="content-section">
+        <div class="section-shell">
+          <div class="post-grid" data-blog-posts></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-site-footer></footer>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Autonomous Rover Stack: Dual Controllers",
+    "category": "Robotics · Robocon '26",
+    "summary": "A complete explanation of the serial communication model and pinout.",
+    "image": "assets/images/post-jetson-dual-architecture.svg",
+    "imageAlt": "Abstract rover control dashboard visual",
+    "stack": ["Python", "Arduino", "Jetson", "ROS", "Mission JSON"],
+    "links": [
+      { "label": "Read the write-up", "href": "post.html?slug=jetson-master-dual-arduino-architecture" }
+      
+    ]
+  },
+  {
+    "title": "Autonomous Rover Stack",
+    "category": "Robotics · Robocon '26",
+    "summary": "A mission-oriented rover stack with Jetson command tools, controller firmware, calibration, route files, and perception alignment experiments.",
+    "image": "assets/images/project-rover.png",
+    "imageAlt": "Abstract rover control dashboard visual",
+    "stack": ["Python", "Arduino", "Jetson", "ROS", "Mission JSON"],
+    "links": [
+      { "label": "Read the write-up", "href": "post.html?slug=autonomous-rover-stack" }
+      
+    ]
+  },
+  {
+    "title": "Dual Controller Rover",
+    "category": "Embedded Systems",
+    "summary": "Command and sensor responsibilities split across controllers, supported by packet helpers, pinout notes, and repeatable testing procedures.",
+    "image": "assets/images/project-controllers.png",
+    "imageAlt": "Abstract embedded controller board visual",
+    "stack": ["Arduino Mega", "Arduino Uno", "I2C", "Serial"],
+    "links": [
+      { "label": "View notes", "href": "post.html?slug=field-testing-notes" }
+      
+    ]
+  }
+]

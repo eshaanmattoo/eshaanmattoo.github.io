@@ -1,0 +1,55 @@
+[
+  {
+    "period": "Foundation",
+    "status": "Core skills forming",
+    "tone": "teal",
+    "title": "Curiosity became engineering practice",
+    "summary": "The journey started with code, electronics, mechanical intuition, and the habit of turning abstract ideas into small working tests.",
+    "evidence": [
+      "Started with Python, Arduino sketches, serial commands, and hardware debugging.",
+      "Began tinkering with electronics and different microcontrollers.",
+      "Learned to treat mistakes as data instead of dead ends."
+    ]
+  },
+  {
+    "period": "COLCON BUILD",
+    "status": "Explored different fields",
+    "tone": "coral",
+    "title": "Started Working on ROS 2 for the eYantra Robotics Competition",
+    "summary": "My first experience with Ubuntu and the wild world of ROS 2, Gazebo, and RViz.",
+    "evidence": [
+      "Learned dual-booting, Linux fundamentals, SSH, and how to work with a team for the first time.",
+      "Started working on simulations in Gazebo, explored TurtleBot tutorials, and finally cleared Round 1 of the eYantra RC.",
+      "Eventually implemented our own ROS 2 rover based on the Waveshare UGV Rover."
+    ]
+  },
+  {
+    "period": "Internship",
+    "status": "Data Analytics, AI/ML & Connected Intelligence",
+    "tone": "olive",
+    "title": "Craziness of Airlines",
+    "summary": "Joined a US-based startup as an intern, working on reducing fuel costs for airlines.",
+    "evidence": [
+      "Started by making simple dashboards in Power BI and Amazon QuickSight.",
+      "Analyzed more than 5 million flight records, including flight plans, loadsheets, OAG schedules, and ADS-B tracking data.",
+      "Developed natural-language intelligent chatbots that could query airlines' proprietary flight and ground-operations data within seconds.",
+      "Explored the world of weight and balance for narrowbody, widebody, and regional aircraft.",
+      "Made production-ready simulations for individual flights.",
+      "Had the honor of connecting with industry leaders and working with amazing people."
+    ]
+  },
+  {
+    "period": "ROBOCON",
+    "status": "Where I stand",
+    "tone": "blue",
+    "title": "My First IITD, Robocon, and Travel Experience",
+    "summary": "Joined Team IUST MechBots on 2 July 2026, one month before the Robocon Finals.",
+    "evidence": [
+      "Had the privilege of representing the first-ever team from Kashmir at the Robocon Finals.",
+      "The rover assembly was finished one week before the finals, which gave me one week for programming and testing.",
+      "An accumulation of software, mechanical, and mainly electrical flaws led to a zero score in both matches.",
+      "The best experience of my life so far; everything we did during those forty days felt like a pilgrimage, and I felt alive again."
+    ]
+  }
+ 
+]

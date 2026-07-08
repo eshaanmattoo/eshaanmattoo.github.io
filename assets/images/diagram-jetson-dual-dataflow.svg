@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Control and telemetry data flow</title>
+  <desc id="desc">A data-flow diagram showing operator input entering the Jetson, command packets going to the command Mega, ACK packets returning, and telemetry packets flowing from the sensor Arduino to the Jetson state.</desc>
+  <defs>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#087e8b"/>
+    </marker>
+    <marker id="arrow-coral" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#cf5b3f"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#315bb7"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="720" fill="#f7f3ec"/>
+  <text x="72" y="72" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">Data Flow Diagram</text>
+  <text x="74" y="108" fill="#5f6873" font-family="Inter, Arial, sans-serif" font-size="19">Command plane and telemetry plane stay separate until the Jetson combines them into state.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <rect x="70" y="180" width="210" height="96" rx="8" fill="#ffffff" stroke="#ded4c6" stroke-width="2"/>
+    <text x="104" y="220" fill="#17191d" font-size="21" font-weight="800">Operator input</text>
+    <text x="104" y="249" fill="#5f6873" font-size="16">WASD, GUI, mission</text>
+
+    <rect x="390" y="150" width="250" height="156" rx="8" fill="#17191d" stroke="#087e8b" stroke-width="4"/>
+    <text x="424" y="202" fill="#f7f3ec" font-size="24" font-weight="800">Jetson intent layer</text>
+    <text x="424" y="234" fill="#dceeea" font-size="16">clamp, trim, sequence</text>
+    <text x="424" y="263" fill="#dceeea" font-size="16">pack command bytes</text>
+
+    <rect x="770" y="150" width="250" height="156" rx="8" fill="#ffffff" stroke="#cf5b3f" stroke-width="4"/>
+    <text x="804" y="202" fill="#17191d" font-size="24" font-weight="800">Command Mega</text>
+    <text x="804" y="234" fill="#5f6873" font-size="16">validate CRC/type</text>
+    <text x="804" y="263" fill="#5f6873" font-size="16">drive motors/servos</text>
+
+    <rect x="770" y="430" width="250" height="156" rx="8" fill="#ffffff" stroke="#315bb7" stroke-width="4"/>
+    <text x="804" y="482" fill="#17191d" font-size="24" font-weight="800">Sensor Arduino</text>
+    <text x="804" y="514" fill="#5f6873" font-size="16">read encoders + IMU</text>
+    <text x="804" y="543" fill="#5f6873" font-size="16">stream telemetry</text>
+
+    <rect x="390" y="430" width="250" height="156" rx="8" fill="#ffffff" stroke="#087e8b" stroke-width="4"/>
+    <text x="424" y="482" fill="#17191d" font-size="24" font-weight="800">Jetson state</text>
+    <text x="424" y="514" fill="#5f6873" font-size="16">ACK reader thread</text>
+    <text x="424" y="543" fill="#5f6873" font-size="16">sensor reader thread</text>
+  </g>
+
+  <path d="M 280 228 L 376 228" fill="none" stroke="#087e8b" stroke-width="6" marker-end="url(#arrow-teal)"/>
+  <text x="303" y="205" fill="#055d66" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">intent</text>
+
+  <path d="M 640 228 L 756 228" fill="none" stroke="#cf5b3f" stroke-width="6" marker-end="url(#arrow-coral)"/>
+  <text x="652" y="205" fill="#9c3e2b" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">10-byte command</text>
+
+  <path d="M 770 290 C 690 350 612 362 540 421" fill="none" stroke="#cf5b3f" stroke-width="5" marker-end="url(#arrow-coral)"/>
+  <text x="614" y="360" fill="#9c3e2b" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">5-byte ACK</text>
+
+  <path d="M 770 508 L 654 508" fill="none" stroke="#315bb7" stroke-width="6" marker-end="url(#arrow-blue)"/>
+  <text x="654" y="488" fill="#29498c" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">20-byte sensor packet at 50 Hz</text>
+
+  <path d="M 512 430 C 512 380 512 352 512 310" fill="none" stroke="#758c1f" stroke-width="5" marker-end="url(#arrow-teal)"/>
+  <text x="530" y="370" fill="#61731a" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="800">display, logs, decisions</text>
+
+  <g font-family="Menlo, Consolas, monospace" font-size="15">
+    <rect x="74" y="618" width="1052" height="54" rx="8" fill="#17191d"/>
+    <text x="104" y="652" fill="#f7f3ec">key press -> DriveIntent -> pack_drive(seq) -> serial write -> ACK -> SharedState + telemetry -> UI redraw</text>
+  </g>
+</svg>

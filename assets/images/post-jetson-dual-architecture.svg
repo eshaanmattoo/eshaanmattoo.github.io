@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750" role="img" aria-labelledby="title desc">
+  <title id="title">Jetson master and dual Arduino slave architecture</title>
+  <desc id="desc">A high level rover architecture diagram showing a laptop over SSH into a Jetson master, with separate USB serial links to a command Mega and a sensor Arduino.</desc>
+  <defs>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M 56 0 L 0 0 0 56" fill="none" stroke="#ded4c6" stroke-width="1" opacity="0.65"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#17191d" flood-opacity="0.12"/>
+    </filter>
+    <marker id="arrow-teal" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#087e8b"/>
+    </marker>
+    <marker id="arrow-coral" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#cf5b3f"/>
+    </marker>
+    <marker id="arrow-blue" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#315bb7"/>
+    </marker>
+  </defs>
+  <rect width="1200" height="750" fill="#f7f3ec"/>
+  <rect width="1200" height="750" fill="url(#grid)" opacity="0.9"/>
+
+  <text x="72" y="84" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="48" font-weight="800">Jetson Master + Dual Arduino Slaves</text>
+  <text x="74" y="122" fill="#5f6873" font-family="Inter, Arial, sans-serif" font-size="20">Two serial planes: commands and feedback, coordinated by the Jetson.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="74" y="222" width="210" height="112" rx="8" fill="#ffffff" stroke="#ded4c6" stroke-width="2"/>
+    <text x="104" y="267" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="800">Laptop</text>
+    <text x="104" y="299" fill="#5f6873" font-family="Inter, Arial, sans-serif" font-size="17">SSH operator</text>
+
+    <rect x="444" y="168" width="312" height="220" rx="8" fill="#17191d" stroke="#087e8b" stroke-width="4"/>
+    <text x="486" y="226" fill="#f7f3ec" font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">Jetson</text>
+    <text x="486" y="264" fill="#dceeea" font-family="Inter, Arial, sans-serif" font-size="18">master coordinator</text>
+    <text x="486" y="307" fill="#f7f3ec" font-family="Menlo, Consolas, monospace" font-size="16">jetson_dual_cli.py</text>
+    <text x="486" y="335" fill="#f7f3ec" font-family="Menlo, Consolas, monospace" font-size="16">rover_packets.py</text>
+
+    <rect x="892" y="124" width="236" height="168" rx="8" fill="#ffffff" stroke="#cf5b3f" stroke-width="4"/>
+    <text x="927" y="176" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Command Mega</text>
+    <text x="927" y="211" fill="#5f6873" font-family="Inter, Arial, sans-serif" font-size="17">actuator slave</text>
+    <text x="927" y="246" fill="#17191d" font-family="Menlo, Consolas, monospace" font-size="15">motors / flippers / arm</text>
+
+    <rect x="892" y="444" width="236" height="168" rx="8" fill="#ffffff" stroke="#315bb7" stroke-width="4"/>
+    <text x="924" y="496" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="800">Sensor Arduino</text>
+    <text x="924" y="531" fill="#5f6873" font-family="Inter, Arial, sans-serif" font-size="17">feedback slave</text>
+    <text x="924" y="566" fill="#17191d" font-family="Menlo, Consolas, monospace" font-size="15">encoders / BNO8x IMU</text>
+  </g>
+
+  <path d="M 284 278 L 430 278" fill="none" stroke="#087e8b" stroke-width="6" marker-end="url(#arrow-teal)"/>
+  <text x="314" y="251" fill="#055d66" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">SSH</text>
+
+  <path d="M 756 224 C 810 210 830 200 882 196" fill="none" stroke="#cf5b3f" stroke-width="6" marker-end="url(#arrow-coral)"/>
+  <text x="775" y="184" fill="#9c3e2b" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">USB serial command packets</text>
+
+  <path d="M 892 250 C 836 270 812 288 756 298" fill="none" stroke="#cf5b3f" stroke-width="4" marker-end="url(#arrow-coral)" opacity="0.88"/>
+  <text x="778" y="333" fill="#9c3e2b" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">ACK packets</text>
+
+  <path d="M 892 516 C 822 490 810 430 756 350" fill="none" stroke="#315bb7" stroke-width="6" marker-end="url(#arrow-blue)"/>
+  <text x="744" y="466" fill="#29498c" font-family="Inter, Arial, sans-serif" font-size="16" font-weight="800">50 Hz sensor packets</text>
+
+  <g>
+    <rect x="140" y="522" width="268" height="90" rx="8" fill="#ffffff" stroke="#ded4c6" stroke-width="2"/>
+    <text x="164" y="557" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800">Operator intent</text>
+    <text x="164" y="586" fill="#5f6873" font-family="Inter, Arial, sans-serif" font-size="16">keys, missions, calibration</text>
+
+    <rect x="486" y="522" width="268" height="90" rx="8" fill="#ffffff" stroke="#ded4c6" stroke-width="2"/>
+    <text x="510" y="557" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="19" font-weight="800">Shared state</text>
+    <text x="510" y="586" fill="#5f6873" font-family="Inter, Arial, sans-serif" font-size="16">ACKs, telemetry, UI view</text>
+  </g>
+  <path d="M 408 568 L 474 568" fill="none" stroke="#758c1f" stroke-width="5" marker-end="url(#arrow-teal)"/>
+</svg>

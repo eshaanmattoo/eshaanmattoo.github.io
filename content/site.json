@@ -1,0 +1,74 @@
+{
+  "name": "Eshaan Mattoo",
+  "role": "Robotics & AI",
+  "email": "eshaanmattoo@gmail.com",
+  "nav": [
+    { "label": "Home", "href": "index.html" },
+    { "label": "Roadmap", "href": "roadmap.html" },
+    { "label": "Experience", "href": "experience.html" },
+    { "label": "Projects", "href": "projects.html" },
+    { "label": "Blog", "href": "blog.html" },
+    { "label": "Contact", "href": "contact.html" }
+  ],
+  "social": [
+    { "label": "GitHub", "url": "https://github.com/eshaanmattoo" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/eshaan-mattoo-1b264521b/" }
+  ],
+  "hero": {
+    "eyebrow": "Professional journey",
+    "headline": "Solving complex problems through simple solutions.",
+    "body": "A personal blog and portfolio tracking my growth across robotics, embedded firmware, AI, and the practical discipline of making hardware behave in the real world.",
+    "caption": "A living archive of decisions, experiments, notes, and systems that moved from bench tests to field-ready behavior.",
+    "image": "assets/images/hero-lab.png",
+    "imageAlt": "Abstract robotics lab visualization with circuit traces and telemetry paths",
+    "primaryCta": { "label": "View roadmap", "href": "roadmap.html" },
+    "secondaryCta": { "label": "Read technical notes", "href": "blog.html" }
+  },
+  "metrics": [
+    { "value": "10+", "label": "Projects" },
+    { "value": "1", "label": "National-Level Competition" },
+    { "value": "1", "label": "Internship" },
+    { "value": "∞", "label": "Passion for Engineering" }
+  ],
+  "focus": [
+    {
+      "title": "Applying AI and ML in Robotics",
+      "copy": "Using AI and ML to gain a tactical advantage and make decision-making easier."
+    },
+    {
+      "title": "Custom Robotics Frameworks",
+      "copy": "A robust, lightweight stack deployable on 8-bit, 16-bit, and 32-bit architectures."
+    },
+    {
+      "title": "Autonomy Tooling",
+      "copy": "Designing mission CLIs, route definitions, calibration files, and vision alignment loops."
+    },
+    {
+      "title": "System Reliability",
+      "copy": "Documenting wiring, pinouts, sensor states, and failure modes so field testing becomes repeatable."
+    }
+  ],
+  "principles": [
+    {
+      "title": "Make the test visible",
+      "copy": "Every tool should expose enough state to understand what the hardware is doing and why."
+    },
+    {
+      "title": "Prefer repeatable motion",
+      "copy": "A clean demo matters less than a motion sequence that can be replayed, inspected, and debugged."
+    },
+    {
+      "title": "Document the interface",
+      "copy": "Pinouts, packet structures, calibration values, and command references are part of the product."
+    },
+    {
+      "title": "Keep learning close to building",
+      "copy": "The fastest growth has come from closing the loop between theory, code, wiring, and field behavior."
+    }
+  ],
+  "contact": {
+    "heading": "Let’s build something precise and useful.",
+    "copy": "I’m interested in robotics, AI/ML, embedded systems, and perception systems that make engineering decisions easier to trust.",
+    "emailLabel": "Email me"
+  }
+}

@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 820" role="img" aria-labelledby="title desc">
+  <title id="title">Binary packet layout diagram</title>
+  <desc id="desc">Byte-level packet diagrams for the command packet, acknowledgement packet, and sensor packet in the Jetson master dual Arduino architecture.</desc>
+  <rect width="1200" height="820" fill="#f7f3ec"/>
+  <text x="72" y="72" fill="#17191d" font-family="Inter, Arial, sans-serif" font-size="42" font-weight="800">Binary Packet Layouts</text>
+  <text x="74" y="108" fill="#5f6873" font-family="Inter, Arial, sans-serif" font-size="19">Fixed-length packets with SOF framing, sequence numbers, status bytes, and CRC-8/ATM.</text>
+
+  <g font-family="Inter, Arial, sans-serif">
+    <text x="72" y="174" fill="#9c3e2b" font-size="24" font-weight="800">Jetson -> Command Mega: 10 bytes, SOF 0xAA</text>
+    <g transform="translate(72 198)">
+      <rect width="1040" height="82" rx="8" fill="#ffffff" stroke="#ded4c6" stroke-width="2"/>
+      <g font-size="14" font-weight="800" text-anchor="middle">
+        <rect x="0" y="0" width="100" height="82" fill="#17191d" rx="8"/>
+        <text x="50" y="32" fill="#f7f3ec">0</text><text x="50" y="58" fill="#f7f3ec">SOF</text>
+        <rect x="100" y="0" width="110" height="82" fill="#cf5b3f"/>
+        <text x="155" y="32" fill="#ffffff">1</text><text x="155" y="58" fill="#ffffff">TYPE</text>
+        <rect x="210" y="0" width="110" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="265" y="32" fill="#17191d">2</text><text x="265" y="58" fill="#17191d">L_PWM</text>
+        <rect x="320" y="0" width="110" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="375" y="32" fill="#17191d">3</text><text x="375" y="58" fill="#17191d">L_DIR</text>
+        <rect x="430" y="0" width="110" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="485" y="32" fill="#17191d">4</text><text x="485" y="58" fill="#17191d">R_PWM</text>
+        <rect x="540" y="0" width="110" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="595" y="32" fill="#17191d">5</text><text x="595" y="58" fill="#17191d">R_DIR</text>
+        <rect x="650" y="0" width="110" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="705" y="32" fill="#17191d">6</text><text x="705" y="58" fill="#17191d">SERVO</text>
+        <rect x="760" y="0" width="110" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="815" y="32" fill="#17191d">7</text><text x="815" y="58" fill="#17191d">ANGLE</text>
+        <rect x="870" y="0" width="80" height="82" fill="#087e8b"/>
+        <text x="910" y="32" fill="#ffffff">8</text><text x="910" y="58" fill="#ffffff">SEQ</text>
+        <rect x="950" y="0" width="90" height="82" fill="#17191d" rx="8"/>
+        <text x="995" y="32" fill="#f7f3ec">9</text><text x="995" y="58" fill="#f7f3ec">CRC</text>
+      </g>
+    </g>
+
+    <text x="72" y="346" fill="#9c3e2b" font-size="24" font-weight="800">Command Mega -> Jetson: 5-byte ACK, SOF 0xAC</text>
+    <g transform="translate(72 370)">
+      <rect width="590" height="82" rx="8" fill="#ffffff" stroke="#ded4c6" stroke-width="2"/>
+      <g font-size="14" font-weight="800" text-anchor="middle">
+        <rect x="0" y="0" width="110" height="82" fill="#17191d" rx="8"/>
+        <text x="55" y="32" fill="#f7f3ec">0</text><text x="55" y="58" fill="#f7f3ec">SOF</text>
+        <rect x="110" y="0" width="130" height="82" fill="#cf5b3f"/>
+        <text x="175" y="32" fill="#ffffff">1</text><text x="175" y="58" fill="#ffffff">TYPE</text>
+        <rect x="240" y="0" width="110" height="82" fill="#087e8b"/>
+        <text x="295" y="32" fill="#ffffff">2</text><text x="295" y="58" fill="#ffffff">SEQ</text>
+        <rect x="350" y="0" width="130" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="415" y="32" fill="#17191d">3</text><text x="415" y="58" fill="#17191d">STATUS</text>
+        <rect x="480" y="0" width="110" height="82" fill="#17191d" rx="8"/>
+        <text x="535" y="32" fill="#f7f3ec">4</text><text x="535" y="58" fill="#f7f3ec">CRC</text>
+      </g>
+    </g>
+
+    <text x="72" y="520" fill="#29498c" font-size="24" font-weight="800">Sensor Arduino -> Jetson: 20 bytes, SOF 0xBB, TYPE 0x10</text>
+    <g transform="translate(72 544)">
+      <rect width="1052" height="166" rx="8" fill="#ffffff" stroke="#ded4c6" stroke-width="2"/>
+      <g font-size="13" font-weight="800" text-anchor="middle">
+        <rect x="0" y="0" width="90" height="82" fill="#17191d" rx="8"/>
+        <text x="45" y="32" fill="#f7f3ec">0</text><text x="45" y="58" fill="#f7f3ec">SOF</text>
+        <rect x="90" y="0" width="90" height="82" fill="#315bb7"/>
+        <text x="135" y="32" fill="#ffffff">1</text><text x="135" y="58" fill="#ffffff">TYPE</text>
+        <rect x="180" y="0" width="80" height="82" fill="#087e8b"/>
+        <text x="220" y="32" fill="#ffffff">2</text><text x="220" y="58" fill="#ffffff">SEQ</text>
+        <rect x="260" y="0" width="130" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="325" y="32" fill="#17191d">3-4</text><text x="325" y="58" fill="#17191d">L_TICKS</text>
+        <rect x="390" y="0" width="130" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="455" y="32" fill="#17191d">5-6</text><text x="455" y="58" fill="#17191d">R_TICKS</text>
+        <rect x="520" y="0" width="130" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="585" y="32" fill="#17191d">7-8</text><text x="585" y="58" fill="#17191d">YAWx16</text>
+        <rect x="650" y="0" width="140" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="720" y="32" fill="#17191d">9-10</text><text x="720" y="58" fill="#17191d">PITCHx16</text>
+        <rect x="790" y="0" width="130" height="82" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="855" y="32" fill="#17191d">11-12</text><text x="855" y="58" fill="#17191d">ROLLx16</text>
+        <rect x="0" y="82" width="210" height="84" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="105" y="116" fill="#17191d">13-16</text><text x="105" y="142" fill="#17191d">TIMESTAMP_MS</text>
+        <rect x="210" y="82" width="160" height="84" fill="#758c1f"/>
+        <text x="290" y="116" fill="#ffffff">17</text><text x="290" y="142" fill="#ffffff">STATUS</text>
+        <rect x="370" y="82" width="160" height="84" fill="#ffffff" stroke="#ded4c6"/>
+        <text x="450" y="116" fill="#17191d">18</text><text x="450" y="142" fill="#17191d">RSVD</text>
+        <rect x="530" y="82" width="160" height="84" fill="#17191d"/>
+        <text x="610" y="116" fill="#f7f3ec">19</text><text x="610" y="142" fill="#f7f3ec">CRC</text>
+      </g>
+    </g>
+  </g>
+</svg>

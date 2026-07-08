@@ -1,0 +1,66 @@
+[
+  {
+    "period": "July '26",
+    "type": "Robocon Robotics Competition",
+    "title": "Autonomous Rover Stack",
+    "summary": "A rover control and autonomy stack that combines Jetson-side command tools, controller firmware, packet helpers, missions, calibration, and perception experiments.",
+    "highlights": [
+      "Built mission CLIs for manual and fixed autonomous runs.",
+      "Structured route and pickup tests as JSON mission files.",
+      "Ran calibration tests for encoders and IMU-based sensor fusion.",
+      "Connected perception and alignment experiments to movement behavior."
+    ],
+    "stack": ["Python", "Arduino", "Jetson", "JSON Missions", "ROS2", "YOLO"]
+  },
+  {
+    "period": "Internship, Dec '25 - Jun '26",
+    "type": "Data Analytics, AI/ML",
+    "title": "World of Widebodies",
+    "summary": "Worked with a US-based startup focused on reducing airline fuel costs through operational data, analytics, intelligent querying, and flight-level simulation.",
+    "highlights": [
+      "Built dashboards in Power BI and Amazon QuickSight for aviation operations data.",
+      "Analyzed more than 5 million flight records, including flight plans, loadsheets, OAG schedules, and ADS-B tracking data.",
+      "Developed natural-language intelligent chatbots that queried proprietary airline flight and ground-operations data within seconds.",
+      "Explored weight and balance workflows across narrowbody, widebody, and regional aircraft.",
+      "Built production-ready simulations for individual flights.",
+      "Worked with aviation industry leaders and learned from a strong, deeply experienced team."
+    ],
+    "stack": ["Power BI", "Amazon QuickSight", "AI/ML", "ADS-B", "OAG", "Aviation Data", "Simulation"]
+  },
+  {
+    "period": "June '26",
+    "type": "Embedded systems integration",
+    "title": "Dual Arduino Control Architecture",
+    "summary": "A multi-controller setup for command routing, sensor handling, actuator control, and serial packet communication.",
+    "highlights": [
+      "Separated command and sensor responsibilities across boards.",
+      "Documented connection maps and testing procedures.",
+      "Created packet helpers to make host-controller communication clearer."
+    ],
+    "stack": ["Arduino Mega", "Arduino Uno", "I2C", "Serial", "C++", "Python"]
+  },
+  {
+    "period": "June '26",
+    "type": "Tooling and diagnostics",
+    "title": "Rover Testing Utilities",
+    "summary": "A suite of GUI and CLI utilities for exercising motors, flippers, servos, SSH workflows, and serial paths during hardware bring-up.",
+    "highlights": [
+      "Built separate tools for individual components and paired movement tests.",
+      "Improved iteration speed by making hardware checks more direct.",
+      "Created reference documents for firmware commands and pinouts."
+    ],
+    "stack": ["Python", "Tkinter", "Serial", "SSH", "Firmware Docs"]
+  },
+  {
+    "period": "June '26",
+    "type": "Sensing and actuation",
+    "title": "Arm, IMU, Encoder, and Sensor Work",
+    "summary": "Focused experiments around robotic arm testing, IMU readings, encoder behavior, and rover sensor-controller sketches.",
+    "highlights": [
+      "Developed small test surfaces for specific hardware subsystems.",
+      "Kept calibration and sensor state visible during integration.",
+      "Used the results to guide the next layer of rover reliability."
+    ],
+    "stack": ["Sensors", "Encoders", "IMU", "Actuators", "Calibration"]
+  }
+]
